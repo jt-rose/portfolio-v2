@@ -192,6 +192,16 @@ interface ExperienceData {
   accomplishments: string[];
 }
 
+interface ImageData {
+  imageID: string;
+  imageSource: string;
+}
+
+const gaIMGData: ImageData = {
+  imageID: "ga-logo",
+  imageSource: '"./assets/experience-logos/general-assembly_logo.png"',
+};
+
 const gaExerienceData: ExperienceData = {
   position: "Software Engineering Fellow",
   company: "General Assembly",
@@ -206,9 +216,16 @@ immersive course, focusing on full stack web development with
   ],
 };
 
-const ExperienceArticle = (config: { experienceData: ExperienceData }) => {
-  const { position, company, description, accomplishments } =
-    config.experienceData;
+const ExperienceLogos = (props: { config: ImageData }) => {
+  return (
+    <div>
+      <img id={props.config.imageID} src={props.config.imageSource} alt="" />
+    </div>
+  );
+};
+
+const ExperienceArticle = (props: { config: ExperienceData }) => {
+  const { position, company, description, accomplishments } = props.config;
   return (
     <article>
       <h3>{position}</h3>
@@ -226,5 +243,15 @@ const ExperienceArticle = (config: { experienceData: ExperienceData }) => {
 };
 
 export const Experience = (/*config: { experienceData: ExperienceData }*/) => {
-  return <ExperienceArticle experienceData={gaExerienceData} />;
+  return (
+    <section id="experience">
+      <h1>Experience</h1>
+      <div id="companies">
+        <div id="company-logos">
+          <ExperienceLogos config={gaIMGData} />
+        </div>
+        <ExperienceArticle config={gaExerienceData} />
+      </div>
+    </section>
+  );
 };
