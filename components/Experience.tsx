@@ -70,7 +70,7 @@
 //     });
 //   });
 
-export const Experience = () => {
+export const ExperienceORIGINAL = () => {
   return (
     <section id="experience">
       <h1>Experience</h1>
@@ -183,4 +183,48 @@ export const Experience = () => {
       </div>
     </section>
   );
+};
+
+interface ExperienceData {
+  position: string;
+  company: string;
+  description: string;
+  accomplishments: string[];
+}
+
+const gaExerienceData: ExperienceData = {
+  position: "Software Engineering Fellow",
+  company: "General Assembly",
+  description: `Currently enrolled in a 500-hour intensive software engineering
+immersive course, focusing on full stack web development with
+    JavaScript, JQuery, EJS, React, Node, Python/ Django, and SQL.
+  `,
+  accomplishments: [
+    "Designed control flow and logic of terminal and browser games",
+    "Developed portfolio site leveraging JQuery, TypeScript, and Sass",
+    "...and more to come!",
+  ],
+};
+
+const ExperienceArticle = (config: { experienceData: ExperienceData }) => {
+  const { position, company, description, accomplishments } =
+    config.experienceData;
+  return (
+    <article>
+      <h3>{position}</h3>
+      <h4>{company}</h4>
+      <p>{description}</p>
+      <div className="experience-accomplishments-container">
+        <ul>
+          {accomplishments.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </article>
+  );
+};
+
+export const Experience = (/*config: { experienceData: ExperienceData }*/) => {
+  return <ExperienceArticle experienceData={gaExerienceData} />;
 };
