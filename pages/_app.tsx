@@ -1,6 +1,7 @@
 import { AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
 import { AppProps } from "next/app";
+import "../sass/styles.scss";
 
 function handleExitComplete() {
   if (typeof window !== "undefined") {

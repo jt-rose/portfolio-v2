@@ -1,0 +1,155 @@
+#projects-modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+#projects-modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#inner-projects-modal {
+  width: 90%;
+  height: 90%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  //justify-content: space-around;
+  gap: 0.7em;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+  text-align: center;
+  //overflow-y: auto;
+}
+
+// @media (min-width: 1500px) {
+//   #inner-projects-modal {
+//     width: 1500px;
+//     height: 800px;
+//   }
+// }
+
+#modal-close-btn-container-top,
+#modal-close-btn-container-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+
+.close-modal-btn {
+  width: auto;
+}
+
+#modal-image-container {
+  width: 80%;
+  max-height: 50%;
+  display: flex;
+  justify-content: center;
+}
+#projects-modal-sample-img {
+  max-width: 100%;
+  max-height: 100%;
+  //aspect-ratio: 1.6 / 1;
+  border-radius: 15px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#project-image-links {
+  display: flex;
+}
+
+#project-image-links li {
+  padding: 0.5em;
+  margin-right: 0.4em;
+  margin-left: 0.4em;
+}
+
+#project-image-links li div {
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 50%;
+}
+
+#project-image-links li:hover {
+  cursor: pointer;
+}
+
+#project-description-container {
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 2em;
+}
+
+#project-skills-used ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 3em;
+}
+
+#project-skills-used li {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+}
+#project-skills-used li img {
+  height: 1.5em;
+}
+.projects-modal-skill-name {
+  display: none;
+}
+
+#url-space {
+  margin-right: 1.5em;
+  margin-left: 1.5em;
+}
+
+#modal-close-btn-container-top {
+  display: flex;
+}
+
+#modal-close-btn-container-bottom {
+  display: none;
+}
+
+@media (min-width: 610px) {
+  #inner-projects-modal {
+    gap: 1em;
+  }
+
+  #project-description-container {
+    padding-top: 0;
+    gap: 1em;
+    justify-content: space-around;
+  }
+
+  #project-skills-used ul {
+    justify-content: space-around;
+    gap: 2em;
+  }
+
+  .projects-modal-skill-name {
+    display: inline;
+    margin-left: 0.3em;
+  }
+
+  #modal-close-btn-container-top {
+    display: none;
+  }
+
+  #modal-close-btn-container-bottom {
+    display: flex;
+  }
+}

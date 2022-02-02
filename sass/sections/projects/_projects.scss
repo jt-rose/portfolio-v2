@@ -1,0 +1,31 @@
+#project-previews {
+  padding-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2em;
+  width: 100%;
+}
+
+#project-previews article:hover {
+  cursor: pointer;
+}
+
+#project-previews img {
+  width: 290px;
+  height: 183px;
+  border: 1px solid black;
+  border-radius: 15px;
+  box-shadow: 10px 5px 5px gray;
+}
+
+#project-previews h3 {
+  padding-top: 0.3em;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#project-previews article:hover h3 {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}

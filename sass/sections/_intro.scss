@@ -1,0 +1,21 @@
+#intro-pic {
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-bottom: 2em;
+}
+
+#intro h3 {
+  margin-bottom: 1.5em;
+}
+
+#intro p {
+  text-align: left;
+  padding: 1em;
+}
+
+@media (min-width: 610px) {
+  #intro p {
+    text-align: center;
+    padding: 3em;
+  }
+}

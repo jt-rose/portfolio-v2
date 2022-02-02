@@ -1,0 +1,16 @@
+// import global styling
+@use "global";
+
+// import sections
+@use "sections/header";
+@use "sections/intro";
+@use "sections/skills";
+@use "sections/about_me";
+@use "sections/projects/projects";
+@use "sections/projects//modal";
+@use "sections/experience";
+@use "sections/contact";
+
+// import fontawesome icons
+@import "../font-awesome-scss/fontawesome.scss";
+@import "../font-awesome-scss/solid.scss";
